@@ -1,0 +1,32 @@
+{
+  "transaction_metadata": {
+    "fee": 5000,
+    "err": null,
+    "logMessages": [
+      "Program 8r7rCz1CK96czdPN3Ef1JjF6JAVUWW6h1Ua1fmQR3btY invoke [1]",
+      "Program log: workflow branch number: 0",
+      "Program log: Begin workflow",
+      "Program Qrac1eRegistry11111111111111111111111111111 invoke [2]",
+      "Process Create instruction",
+      "Program 11111111111111111111111111111111 invoke [3]",
+      "Program 11111111111111111111111111111111 success",
+      "Created REX 78d38d484fed817ac9c1184c4af1920c88ba7e36487942ba3175b8b8d794dc3e:REDACTED_PUBLIC_SIGNER at 42P73BYf9azXFTXDgcJQKQ87a3sHXFvwQGEj22HZGexZ",
+      "Program Qrac1eRegistry11111111111111111111111111111 success",
+      "Program Subscriber111111111111111111111111111111111 invoke [2]",
+      "SubscribeToEvent",
+      "Deploying account with 5895120 kelvin for rent exemption",
+      "Program 11111111111111111111111111111111 invoke [3]",
+      "Program 11111111111111111111111111111111 success",
+      "SUBSCRIPTION_AUDIT::SUBSCRIBE::signer=REDACTED_PUBLIC_SIGNER::subscription=CyGjpVvuZBXDQUW7PidTBjnH6Pa7eD41E3q8a27WX8PU::nonce=[50, 215, 230, 169, 187, 167, 197, 255, 231, 160, 190, 85, 69, 218, 225, 139, 102, 80, 117, 57, 66, 95, 12, 97, 235, 99, 234, 195, 240, 163, 171, 160]::topic=rialo_rex_processor_interface::event::RexReportEvent::78d38d484fed817ac9c1184c4af1920c88ba7e36487942ba3175b8b8d794dc3e:REDACTED_PUBLIC_SIGNER::kind=OneShot::active_commits=20249086..=20250086",
+      "rialo_subscribe::CyGjpVvuZBXDQUW7PidTBjnH6Pa7eD41E3q8a27WX8PU",
+      "Program Subscriber111111111111111111111111111111111 success",
+      "Program log: Creating workflow account 5XmMAmBLWz3LrFsn6KcMFeSRpSHf5mAAAnymT7VEk6xm with 24 bytes and 1057920 kelvin",
+      "Program 11111111111111111111111111111111 invoke [2]",
+      "Program 11111111111111111111111111111111 success",
+      "Program log: Workflow account 5XmMAmBLWz3LrFsn6KcMFeSRpSHf5mAAAnymT7VEk6xm initialized successfully",
+      "Program 8r7rCz1CK96czdPN3Ef1JjF6JAVUWW6h1Ua1fmQR3btY consumed 62046 of 200000 compute units",
+      "Program 8r7rCz1CK96czdPN3Ef1JjF6JAVUWW6h1Ua1fmQR3btY success"
+    ],
+    "computeUnitsConsumed": 78675
+  }
+}

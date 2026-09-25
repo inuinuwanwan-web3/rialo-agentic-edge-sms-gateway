@@ -1,0 +1,21 @@
+{
+  "jsonrpc": "2.0",
+  "id": 1,
+  "result": {
+    "context": {
+      "slot": 20250855,
+      "api_version": "0.21.0-alpha.0"
+    },
+    "value": {
+      "kelvin": 1057920,
+      "owner": "8r7rCz1CK96czdPN3Ef1JjF6JAVUWW6h1Ua1fmQR3btY",
+      "data": [
+        "AgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+        "base64"
+      ],
+      "executable": false,
+      "rentEpoch": 18446744073709551615,
+      "space": 24
+    }
+  }
+}

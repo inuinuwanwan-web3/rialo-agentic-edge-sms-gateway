@@ -1,0 +1,31 @@
+{
+  "network": "devnet",
+  "execution_method": "official CLI create-http-post-rex; no Venus deployment",
+  "public_endpoint": "https://temporary-relay.example.invalid/sms/deliver",
+  "provider": "mock",
+  "real_sms_sends": 0,
+  "devnet_creation_commands_executed": 1,
+  "nonce": "sms-relay-20260924-01",
+  "signature": "2wekKn7FBXWx5e8oRpgVujhhAUHxH8g3hcPoUMi653ojkEt99k4SKJAuXmcTmrHdFyAEcWPoFHqrScZtpVYunP8m",
+  "transaction_status": {"slot": 20231735, "executed": true, "err": null},
+  "external_probe": {
+    "http_status": 200,
+    "response": {"message_id": "mock_608dad68831440c8a161804e576e1b0a", "status": "delivered"}
+  },
+  "rex_report": {
+    "round": 20231741,
+    "tee_timestamp": "2026-09-24T13:39:41.899105Z",
+    "decoded_response": {"message_id": "mock_108c24761b28479a9429bae65cd7a9e5", "status": "delivered"},
+    "observed_update_data": [0,0,78,0,0,0,123,34,109,101,115,115,97,103,101,95,105,100,34,58,32,34,109,111,99,107,95,49,48,56,99,50,52,55,54,49,98,50,56,52,55,57,97,57,52,50,57,98,97,101,54,53,99,100,55,97,57,101,53,34,44,32,34,115,116,97,116,117,115,34,58,32,34,100,101,108,105,118,101,114,101,100,34,125,27,0,0,0,50,48,50,54,45,48,57,45,50,52,84,49,51,58,51,57,58,52,49,46,56,57,57,49,48,53,90]
+  },
+  "lineage": {
+    "root_success": true,
+    "block_height": 20231734,
+    "program_id": "Qrac1eRegistry11111111111111111111111111111",
+    "subscriptions": [],
+    "children": [],
+    "truncated": false
+  },
+  "venus_workflow_state_verified": false,
+  "note": "Observed CLI results; mock delivered is simulated. Tunnel URL is temporary."
+}

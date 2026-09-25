@@ -1,0 +1,38 @@
+{
+  "result": "BLOCKED",
+  "timeout_before_ms": 300,
+  "timeout_after_ms": 5000,
+  "validators_before_implicit": 5,
+  "validators_after_explicit": 1,
+  "timeout_error": "ProgramError::Custom(5000), hex 0x1388",
+  "program_id": "8r7rCz1CK96czdPN3Ef1JjF6JAVUWW6h1Ua1fmQR3btY",
+  "workflow_slug_hex": "736d732d76656e75732d32303236303932342d30320000000000000000000000",
+  "start_invocations": 1,
+  "start_err": null,
+  "rex_report": null,
+  "handler_transaction": null,
+  "workflow_state": {
+    "message_id": "",
+    "status": ""
+  },
+  "workflow_state_framework_counter": 2,
+  "state_observation_slot": 20250855,
+  "subscription_active_commits_end": 20250086,
+  "read_result_sent": false,
+  "response_state_match_verified": false,
+  "tests": {
+    "venus_passed": 3,
+    "relay_passed": 8,
+    "artifact_build": "PASS"
+  },
+  "manifest_unchanged": true,
+  "manifest_sha256": "97249d82eb93b7bbe44603fdfdd06c481967f4057d66e6d59ee93e0cfc7f6be4",
+  "artifact_sha256": "a6ec33e586aae34902dcce8711275175d943596e301ff3a829b2541ab8d0093e",
+  "real_sms_sends": 0,
+  "provider_secrets_added": 0,
+  "secret_exposure": 0,
+  "other_projects_modified": false,
+  "blocker": "No REX report or callback observed after subscription active commit range; cause unconfirmed. This is not an observed Timeout report.",
+  "http_delivery_observed": false,
+  "signing": "Existing DevNet signing key used internally by official CLI; no key values recorded."
+}

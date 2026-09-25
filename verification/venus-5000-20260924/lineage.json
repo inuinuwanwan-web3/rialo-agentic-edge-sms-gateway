@@ -1,0 +1,33 @@
+{
+  "lineage": {
+    "lineage": {
+      "workflowNodes": [
+        {
+          "id": "4sdbLtrYgM6C8Zag1aAPcTPvhBzCisWZ4KiuLXAVFMSt4kYQ5UpGVamoJ4L48mGtDFbn4E34SpoNGsBopzXpkzys",
+          "depth": 0,
+          "data": {
+            "blockHeight": 20249086,
+            "timestamp": 1790260738992,
+            "success": true,
+            "instructionCount": 1,
+            "instructionProgramIds": [
+              "8r7rCz1CK96czdPN3Ef1JjF6JAVUWW6h1Ua1fmQR3btY"
+            ]
+          },
+          "subscriptions": [],
+          "triggeredBy": null,
+          "workflowChildren": [],
+          "hasMoreChildren": false
+        }
+      ]
+    },
+    "leaves": [
+      "4sdbLtrYgM6C8Zag1aAPcTPvhBzCisWZ4KiuLXAVFMSt4kYQ5UpGVamoJ4L48mGtDFbn4E34SpoNGsBopzXpkzys"
+    ],
+    "truncated": false,
+    "truncationReason": "none",
+    "continuationHints": []
+  },
+  "quiet": true,
+  "full_id": true
+}

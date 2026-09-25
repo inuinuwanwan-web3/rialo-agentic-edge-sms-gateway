@@ -1,0 +1,18 @@
+.env
+.env.*
+!.env.example
+__pycache__/
+*.py[cod]
+.venv/
+target/
+
+# Private local material must never be published.
+*.pem
+*.key
+*.p12
+*.pfx
+*keypair*.json
+credentials.json
+credentials/
+secrets/
+cloudflared/

@@ -1,0 +1,34 @@
+[package]
+name = "venus-sms"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+crate-type = ["cdylib", "rlib"]
+
+[workspace]
+members = ["artifact"]
+default-members = ["."]
+resolver = "2"
+
+[features]
+implementation = []
+
+[dependencies]
+rialo-venus-proc-macro = "=0.18.1"
+rialo-venus = "=0.18.1"
+rialo-s-program = "=0.18.1"
+rialo-s-program-error = "=0.18.1"
+rialo-s-compute-budget-interface = "=0.18.1"
+rialo-events-core = "=0.18.1"
+rialo-rex-registry-interface = "=0.18.1"
+rialo-rex-processor-interface = "=0.18.1"
+rialo-subscriber-interface = "=0.18.1"
+rialo-types = "=0.18.1"
+rialo-limits = "=0.18.1"
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+bincode = "1.3"
+
+[profile.release]
+panic = "abort"
