@@ -14,6 +14,70 @@ not include a separate saved report of the Send Email Gateway investigation.
 AGP, Latch, rialo-first, and the existing rialo-agp-latch repository are separate
 projects and were not modified for this publication.
 
+## 2026-09-27 SMS Gateway implementation boundary
+
+### Publication scope
+
+This section records implementation and offline verification completed in the
+local SMS prototype on 2026-09-27. It does not publish those local source changes
+or raw observation evidence. The archived source and usage instructions elsewhere
+in this checkout therefore do not yet include the policy boundary, observation
+modules, or offline verdict described below. This is a progress record, not a
+claim that the published checkout reproduces all 54 tests.
+
+### Completed locally
+
+- A fail-closed local policy boundary calls the mock provider only for an explicit
+  `ALLOW`. `DENY`, a missing decision, an invalid decision, and a decision exception
+  each result in **0 provider calls**. This is a trusted local injection boundary,
+  **not an authenticated connection to an actual REX policy decision**. A future
+  REX integration must verify and bind its decision to the request. The local CLI
+  supplies no decision and consequently denies delivery by default.
+- The offline evidence verdict distinguishes **PASS**, **FAIL**, and
+  **INSUFFICIENT_EVIDENCE**. PASS requires a successful start matched to the run,
+  a successful handler matched to the workflow, matching report/state/message ID
+  evidence, and no ambiguous or conflicting evidence. An explicit matched
+  transaction failure yields FAIL. Missing evidence, RPC acquisition errors,
+  correlation mismatches, conflicts, and multiple starts are not automatically
+  treated as failures; the relevant evidence-insufficient cases are covered.
+- The implementation boundary includes the mock provider, input validation,
+  secret protection, local policy boundary, observability, transaction
+  correlation, REX report/callback/workflow-state handling, and offline verdict.
+  These are prototype capabilities, not official Send SMS compatibility claims.
+
+### Offline verification
+
+- New verdict tests: **15 passed / 0 failed**.
+- Full suite: **54 passed / 0 failed** — Python **51**, Rust **3**.
+- Python tests ran with network socket creation blocked; no network attempts
+  occurred. Rust tests used Cargo offline mode.
+- During this implementation verification: external network communication **0**,
+  real SMS sends **0**, real Email sends **0**, DevNet transactions **0**.
+- The saved September 25 success-run evidence receives
+  `INSUFFICIENT_EVIDENCE / RPC_ERRORS_OR_UNKNOWN_COVERAGE` from the stricter new
+  verdict. This does not change the historical observations above into FAIL.
+- Mock `delivered` and an offline PASS do not prove actual SMS delivery,
+  confidential policy enforcement, or official Gateway integration.
+
+### Unverified boundary and resumption condition
+
+As checked on 2026-09-27, the [official Agentic Edge Harness](https://agents.rialo.io/)
+labels Send SMS **Coming Soon**. The information reviewed does not establish the
+formal SMS API, policy-decision format and verification, credential integration,
+carrier delivery-result contract, or transaction/workflow correlation identifiers
+needed to connect this prototype without assumptions. The review did not exhaust
+all possible public material; it makes no claim of compatibility with unpublished
+specifications. Validator dispatch and assignment remain subject to the evidence
+limitations already recorded above.
+
+**Current status: waiting for official Send SMS publication.** Resume when Rialo
+Send SMS is Live and public specifications are available for the API, policy
+decision, credential handling, delivery result, and transaction/workflow
+correlation. Do not invent these contracts or repeat mock/observability work as
+new integration evidence. No new live SMS, Email, or DevNet action was performed
+to publish this record; GitHub synchronization is separate from the zero-network
+offline verification above.
+
 ## Verified status and remaining blocker
 
 The following results are historical observations from 2026-09-24, recorded in
