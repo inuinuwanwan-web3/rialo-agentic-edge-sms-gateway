@@ -68,6 +68,61 @@ for this final read-only review or publication. Mock-provider success is not
 proof of real SMS delivery. Only this summary is added; raw verification logs,
 phone numbers, credentials, tunnel secrets, and private keys are not added.
 
+## 2026-09-27: Harness Email delivery and DevNet correlation audit
+
+### Email E2E: PASS
+
+One real email was sent through the public Rialo Agentic Edge Harness Send Email
+interface. This is an Email Gateway observation, separate from the SMS prototype
+and its mock-provider verification above.
+
+- Sender label: `test-agent`.
+- Test message: `Rialo Agentic Edge test 2026-09-27`.
+- Send count: **1**.
+- Timestamp: **2026-09-27 18:41:15 JST / 09:41:15 UTC**.
+- Harness UI: **Email sent successfully**.
+- Request Log: **accepted**; Delivery Log: **delivered**.
+- Actual email receipt: **confirmed by the user**.
+- Public request-log timestamp, sender label, and message matched the reported
+  send; recipient address and raw log/response contents are omitted.
+
+### On-chain correlation: UNCONFIRMED
+
+Read-only DevNet block-time lookup identified:
+
+- Nearest block height: **21740671**.
+- Nearest block time: **2026-09-27 09:41:15 UTC**.
+- Search window: **2026-09-27 09:36:00–09:46:00 UTC**.
+- Corresponding block range: **21738787–21742224**.
+
+The matching block timestamp does not identify the email transaction. Public
+Harness logs did not provide a transaction signature, workflow ID, or REX ID
+that directly correlates this email with a specific DevNet transaction.
+Five transaction metadata entries were obtained at the target-time block;
+none was established as the matching email transaction. Full-range metadata
+inspection remained incomplete. Further exhaustive RPC enumeration was stopped
+for efficiency after prolonged response waits.
+
+Transaction, workflow, REX, callback/event, and workflow-state correlation remain
+**unconfirmed**. This does **not** establish that no on-chain record exists.
+No claim is made that a transaction was confirmed for this email, that Rialo
+ evaluated this activity, or that it qualifies for points or rewards.
+
+### Completion boundary and next resumption conditions
+
+Email delivery verification is complete; do not resend the email merely to
+repeat this check. Resume on-chain investigation only when a new correlation
+anchor is available: a Harness backend transaction signature, workflow/REX ID,
+request-to-transaction mapping, or a documented gateway program/account plus
+matching instruction/event evidence. Require a match beyond timestamp alone.
+Keep multiple plausible transactions as candidates until uniquely correlated.
+Do not resume broad RPC enumeration without new evidence or a targeted query.
+
+The audit performed **0 new live actions** and modified **0 files**; its network
+operations were read-only. This documentation update does not resend email or
+perform DevNet actions. No recipient address, credentials, private keys, raw
+verification logs, or runtime data are included.
+
 ## Publication scope and privacy
 
 Files originate from the existing `sms-relay-prototype` directory, with its
