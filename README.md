@@ -40,6 +40,34 @@ Publication on 2026-09-25 does not rerun DevNet operations or tests.
 - Mock `"delivered"` does **not** mean a real SMS was delivered.
 - The relationship to **RIALO Points / airdrop credit is unverified**.
 
+## 2026-09-27: final read-only evidence review
+
+The final read-only review confirmed the following successful run:
+`verification/2026-09-25-3e4a2c490dc24e0388eb934322f9a9c2/`.
+This is a reference to the local evidence directory; its raw logs are not
+included in this publication. Results below are the confirmed review findings,
+not a new execution performed to publish this update.
+
+- `start_success`: **true**; `handler_success`: **true**.
+- `response_report_match`: **true**; `response_state_match`: **true**.
+- `start_correlation_matched`: **true**; `missed_duties`: **[]**.
+- `state_saved`: **matched**.
+- Observed boundaries: `start`, `rex_creation`, `relay_arrival`, `response_sent`,
+  `report`, `event`, and `callback`; `state_saved`: **matched**.
+- `assignment`: **not_observed**.
+- `dispatch`: **unknown_requires_validator_logs**.
+- The run instrumented with the 5000ms measurement: **PASS** in this review.
+
+This successful run supersedes the earlier incomplete status as the latest
+result; it does not establish the direct root cause of the historical failed
+runs. That root cause remains unconfirmed because validator logs are missing.
+Assignment and dispatch must not be described as observed or proven.
+
+No new `start`, deployment, invoke, Relay POST, or real SMS send was performed
+for this final read-only review or publication. Mock-provider success is not
+proof of real SMS delivery. Only this summary is added; raw verification logs,
+phone numbers, credentials, tunnel secrets, and private keys are not added.
+
 ## Publication scope and privacy
 
 Files originate from the existing `sms-relay-prototype` directory, with its
